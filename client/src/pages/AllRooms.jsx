@@ -100,7 +100,8 @@ const AllRooms = () => {
                 {roomsDummyData.map((room) => (
                     <div key={room._id} className='flex flex-col md:flex-row items-start py-10 gap-6 border-b border-gray-300 last:pb-30 last:border-0'>
                         <img
-                            onClick={() => { navigate(`rooms/${room._id}`); window.scrollTo(0, 0) }}
+                            onClick={() => { navigate(`/rooms/${room._id}`); window.scrollTo(0, 0) }}
+                            
                             src={room.images[0]} 
                             alt="hotel-Img" 
                             title='View Room Details'
@@ -109,7 +110,7 @@ const AllRooms = () => {
                         <div className='md:w-1/2 flex flex-col gap-2'>
                             <p className='text-gray-500'>{room.hotel.city}</p>
                             <p
-                                onClick={() => { navigate(`rooms/${room._id}`); window.scrollTo(0, 0) }}
+                                onClick={() => { navigate(`/rooms/${room._id}`); window.scrollTo(0, 0) }}
                                 className='text-gray-800 text-3xl font-playfair cursor-pointer hover:text-primary'
                             >
                                 {room.hotel.name}
