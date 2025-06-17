@@ -19,7 +19,7 @@ app.use(clerkMiddleware());
 app.use(express.json());
 
 // Routes
-app.post("/api/clerk", clearkWebhooks); // Changed to app.post for a proper webhook route
+app.post("/api/clerk", clearkWebhooks); 
 
 app.get("/", (req, res) => {
   res.send("API is working");
