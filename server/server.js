@@ -18,8 +18,8 @@ app.use(cors());
 app.use(clerkMiddleware());
 app.use(express.json());
 
-// Routes
-app.post("/api/clerk", clearkWebhooks); 
+// API to listen
+app.use("/api/clerk", clearkWebhooks);
 
 app.get("/", (req, res) => {
   res.send("API is working");
